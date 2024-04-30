@@ -20,33 +20,23 @@ body {
     font-weight: bold;
 }
 
-.nav-bar {
-    background-color: #800f58;
-    padding: 15px 0;
-    text-align: center;
-}
-
-.nav-bar a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 15px;
-    margin: 0 10px;
-    background-color: #9c1b6e;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.nav-bar a:hover {
-    background-color: #ae257e;
-}
-
 .container {
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.left-content,
+.right-content {
+    width: calc(50% - 10px);
+}
+
+.left-content {
+    padding-right: 10px;
+}
+
+.right-content {
+    padding-left: 10px;
 }
 
 h2 {
@@ -56,25 +46,30 @@ h2 {
     text-align: center;
 }
 
-.sanskrit-table {
+.niyamas-table, 
+.yamas-table {
     width: 100%;
     margin-bottom: 20px;
     border-collapse: collapse;
 }
 
-.sanskrit-table th,
-.sanskrit-table td {
+.niyamas-table th,
+.niyamas-table td,
+.yamas-table th,
+.yamas-table td {
     text-align: left;
     padding: 12px;
     border: 1px solid #ddd;
 }
 
-.sanskrit-table th {
+.niyamas-table th,
+.yamas-table th {
     background-color: #9c1b6e;
     color: #fff;
 }
 
-.sanskrit-table tr:nth-child(even) {
+.niyamas-table tr:nth-child(even),
+.yamas-table tr:nth-child(even) {
     background-color: #f4f4f4;
 }
 
@@ -89,4 +84,32 @@ h2 {
 .footer p {
     margin: 0;
     font-size: 0.75em;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .header {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .niyamas-table th,
+    .niyamas-table td,
+    .yamas-table th,
+    .yamas-table td {
+        padding: 8px;
+    }
 }
