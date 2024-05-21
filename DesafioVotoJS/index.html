@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Vote no seu candidato</h1>
+        <div class="vote-options">
+            <button onclick="selectCandidate('Ada Lovelace')">Ada Lovelace</button>
+            <button onclick="selectCandidate('Margaret Hamilton')">Margaret Hamilton</button>
+            <button onclick="selectCandidate('Fei-Fei Li')">Fei-Fei Li</button>
+            <button onclick="selectCandidate('Linus Torvalds')">Linus Torvalds</button>
+            <button onclick="selectCandidate('Branco')">Branco</button>
+            <button onclick="selectCandidate('Nulo')">Nulo</button>
+        </div>
+    </div>
+
+    <div class="confirmation" id="confirmation">
+        <h2>Você votou em: <span id="selected-candidate"></span></h2>
+        <button onclick="voteAgain()">Votar Novamente</button>
+        <button onclick="confirmVote()">Confirmar Voto</button>
+    </div>
+</body>
+</html>
